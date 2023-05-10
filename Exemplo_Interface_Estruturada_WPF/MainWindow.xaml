@@ -6,7 +6,32 @@
         xmlns:local="clr-namespace:Exemplo_Interface_Estruturada_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid x:Name="mainGrid" Margin="5,5,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="0,0,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="topButton" Content="Click" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,5,5" Grid.Row="1" VerticalAlignment="Top" Height="36" Width="71"/>
+        </Grid>
+        <Rectangle x:Name="mainRectangle" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" Fill="Black"></Rectangle>
+        <Button x:Name="bottomButton" Content="Click" Grid.Column="1" Margin="0,5,0,0" Grid.Row="3"/>
     </Grid>
 </Window>
