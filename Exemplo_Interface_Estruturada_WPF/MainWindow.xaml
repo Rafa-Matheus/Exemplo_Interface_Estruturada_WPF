@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Exemplo_Interface_Estruturada_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Segmented Layout" Height="450" Width="800">
     <Grid x:Name="mainGrid" Margin="5,5,5,5">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -33,5 +33,13 @@
         </Grid>
         <Rectangle x:Name="mainRectangle" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" Fill="Black"></Rectangle>
         <Button x:Name="bottomButton" Content="Click" Grid.Column="1" Margin="0,5,0,0" Grid.Row="3"/>
+        <RichTextBox x:Name="topRTB" Grid.Column="1" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5,5,5,5" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="36" Foreground="#FF0925F3">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBox x:Name="bottomTB" TextWrapping="NoWrap" HorizontalAlignment="Stretch" Margin="5,5,5,0" Grid.Row="3" Text="TextBox" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" Background="#FF767171" Foreground="White"/>
     </Grid>
 </Window>
